@@ -8,7 +8,7 @@ int main() {
 
     printf("=== Test interactivo para direcciones virtuales ===\n");
     
-    // Pedir tamaño de página
+    // Pedir tamanio pag
     printf("Ingresa el tamaño de página (ej: 4096): ");
     fgets(input, sizeof(input), stdin);
     uint32_t page_size = (uint32_t)strtoul(input, NULL, 10);
@@ -26,12 +26,12 @@ int main() {
         printf("Ingresa una dirección virtual DV (hex o decimal) o 'exit': ");
 
         fgets(input, sizeof(input), stdin);
-        input[strcspn(input, "\n")] = '\0'; // quitar salto de línea
+        input[strcspn(input, "\n")] = '\0'; // quitar salto de linea
 
         if (strcmp(input, "exit") == 0)
             break;
 
-        // Convertir texto a número real
+        // Convertir texto a num
         uint32_t dv = parse_address(input);
 
         // Obtener npv y offset
