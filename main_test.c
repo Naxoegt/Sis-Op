@@ -6,16 +6,16 @@
 int main() {
     char input[256];
 
-    printf("=== Test interactivo para direcciones virtuales ===\n");
+    printf("Test direcciones virtuales ===\n");
     
     // Pedir tamanio pag
-    printf("Ingresa el tamaño de página (ej: 4096): ");
+    printf("Ingresa el tamanio de pagina (ej: 4096): ");
     fgets(input, sizeof(input), stdin);
     uint32_t page_size = (uint32_t)strtoul(input, NULL, 10);
 
     int b = calc_b_from_page_size(page_size);
     if (b < 0) {
-        printf("Tamaño de página inválido.\n");
+        printf("Tamaño de pagina inválido.\n");
         return 1;
     }
 
@@ -45,3 +45,4 @@ int main() {
 
     return 0;
 }
+
